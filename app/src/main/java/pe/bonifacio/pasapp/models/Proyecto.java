@@ -1,5 +1,8 @@
 package pe.bonifacio.pasapp.models;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Proyecto{
 
     private Long id;
@@ -13,6 +16,27 @@ public class Proyecto{
     private String imagen;
     private Long prousuario;
 
+
+
+    private List<Superficie>superficie=new ArrayList<>();
+
+    private List<Mina>mina=new ArrayList<>();
+
+    public List<Superficie> getSuperficie() {
+        return superficie;
+    }
+
+    public void setSuperficie(List<Superficie> superficie) {
+        this.superficie = superficie;
+    }
+
+    public List<Mina> getMina() {
+        return mina;
+    }
+
+    public void setMina(List<Mina> mina) {
+        this.mina = mina;
+    }
 
     public Long getId() {
         return id;

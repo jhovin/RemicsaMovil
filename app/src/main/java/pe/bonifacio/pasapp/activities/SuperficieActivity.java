@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -85,6 +86,7 @@ public class SuperficieActivity extends AppCompatActivity {
             public void onResponse(Call<Void> call, Response<Void> response) {
                 if(response.code()==201){
                     Log.d("TAG1", "Máquina de Superficie creado correctamente");
+                    Toast.makeText(SuperficieActivity.this, "Máquina de Superficie creado",Toast.LENGTH_SHORT).show();
                 }
             }
 

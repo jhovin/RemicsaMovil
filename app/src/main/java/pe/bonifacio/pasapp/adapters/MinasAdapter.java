@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import pe.bonifacio.pasapp.R;
+import pe.bonifacio.pasapp.activities.ReporteActivity;
 import pe.bonifacio.pasapp.models.Mina;
 
 public class MinasAdapter extends RecyclerView.Adapter<MinasAdapter.ViewHolder> {
@@ -56,10 +57,13 @@ public class MinasAdapter extends RecyclerView.Adapter<MinasAdapter.ViewHolder> 
         viewHolder.nombreText.setText(mina.getNombre_min());
 
 
-
+        final Mina min = this.minas.get(position);
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(context, ReporteActivity.class);
+                intent.putExtra("id", min.getMina_id());
+                context.startActivity(intent);
 
             }
         });

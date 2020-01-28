@@ -1,5 +1,7 @@
 package pe.bonifacio.pasapp.models;
 
+import java.util.List;
+
 public class Superficie {
 
     private Long superficie_id;
@@ -9,7 +11,9 @@ public class Superficie {
     private String observacion;
     private String serie_motor;
     private String fecha_inicio;
+
     private Long supproyecto;
+
 
 
     public Long getSuperficie_id() {
