@@ -17,21 +17,21 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="40dp"
             android:background="@drawable/shape2"
             android:orientation="vertical"
             android:padding="15dp">
 
             <ImageView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 android:layout_gravity="center"
                 android:src="@drawable/ic_archivos_y_carpetas"></ImageView>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:text="REPORTE DE OPERATIVIDAD DIARIA"
                 android:textSize="20sp"
@@ -42,6 +42,17 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp">
 
+                <EditText
+                    android:id="@+id/etSistema"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_sistema"
+                    android:drawablePadding="7dp"
+                    android:hint="Sistema"
+                    android:inputType="text"
+                    android:maxLength="100"
+                    android:maxLines="1" />
+
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -50,7 +61,7 @@
                 android:layout_marginBottom="16dp">
 
                 <EditText
-                    android:id="@+id/descripcion_input"
+                    android:id="@+id/etDescripcion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_alinear_a_la_izquierda"
@@ -68,7 +79,7 @@
                 android:layout_marginBottom="16dp">
 
                 <android.support.design.widget.TextInputEditText
-                    android:id="@+id/motivo_input"
+                    android:id="@+id/etMotivo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_detener"
@@ -87,7 +98,7 @@
                 android:layout_marginBottom="16dp">
 
                 <android.support.design.widget.TextInputEditText
-                    android:id="@+id/ot_input"
+                    android:id="@+id/etOt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_antiguo_testamento"
@@ -106,7 +117,7 @@
                 android:layout_marginBottom="16dp">
 
                 <android.support.design.widget.TextInputEditText
-                    android:id="@+id/horometro_input"
+                    android:id="@+id/etHorometro_reporte"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_24hr"
@@ -116,8 +127,8 @@
                     android:inputType="text"
                     android:maxLength="100"
                     android:maxLines="1" />
-
             </android.support.design.widget.TextInputLayout>
+
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
@@ -125,7 +136,7 @@
                 android:layout_marginBottom="16dp">
 
                 <android.support.design.widget.TextInputEditText
-                    android:id="@+id/duracion_input"
+                    android:id="@+id/etEvento"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_duracion"
@@ -145,13 +156,13 @@
                 android:layout_marginBottom="16dp">
 
                 <EditText
-                    android:id="@+id/fecha_input"
+                    android:id="@+id/etFecha_reporte"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:cursorVisible="false"
                     android:drawableStart="@drawable/ic_calendario"
                     android:drawablePadding="7dp"
-                    android:hint="Fecha"
+                    android:hint="Fecha del Evento"
                     android:inputType="date"
                     android:maxLength="100"
                     android:maxLines="1" />
@@ -164,7 +175,26 @@
                 android:layout_marginBottom="16dp">
 
                 <android.support.design.widget.TextInputEditText
-                    android:id="@+id/observacion_input"
+                    android:id="@+id/etEstado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_analitica"
+                    android:drawablePadding="7dp"
+                    android:ems="10"
+                    android:hint="Estado de la Máquina"
+                    android:inputType="textNoSuggestions|textCapCharacters"
+                    android:maxLength="100"
+                    android:maxLines="1" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/etObservacion_reporte"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_analitica"
@@ -179,7 +209,7 @@
 
 
             <Button
-                android:id="@+id/btn_registrar_maquinasup"
+                android:id="@+id/btn_reporte"
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -193,6 +223,7 @@
                 android:layout_height="40dp">
 
             </View>
+
 
         </LinearLayout>
 
